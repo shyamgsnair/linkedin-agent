@@ -25,10 +25,10 @@
   "kv_namespaces": [
     // OAuth grants and tokens (managed by workers-oauth-provider; the LinkedIn token is stored encrypted).
     // Create with: npx wrangler kv namespace create OAUTH_KV   (then paste the id below)
-    { "binding": "OAUTH_KV", "id": "REPLACE_WITH_OAUTH_KV_ID" },
+    { "binding": "OAUTH_KV", "id": "29437c7fecfb487ea4d548533f1f5e77" },
     // Agent data: config (voice guide, watchlist), post history, duplicate-check hashes.
     // Create with: npx wrangler kv namespace create DATA_KV    (then paste the id below)
-    { "binding": "DATA_KV", "id": "REPLACE_WITH_DATA_KV_ID" }
+    { "binding": "DATA_KV", "id": "722a94b520f84be7aa6d11dcd6523172" }
   ],
 
   // Per-IP rate limit on the sign-in and registration endpoints.

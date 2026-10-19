@@ -66,7 +66,7 @@ npx wrangler kv namespace create OAUTH_KV
 npx wrangler kv namespace create DATA_KV
 ```
 
-Paste each printed `id` into `worker/wrangler.jsonc`, replacing `REPLACE_WITH_OAUTH_KV_ID` and `REPLACE_WITH_DATA_KV_ID`. These IDs are not secret.
+Paste each printed `id` into `worker/wrangler.jsonc`, replacing the existing `OAUTH_KV` and `DATA_KV` ids (those belong to the author's account). Answer **n** when Wrangler offers to add them for you. These IDs are not secret.
 
 ### 3. Run locally
 
