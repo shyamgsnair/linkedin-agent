@@ -43,6 +43,10 @@
     "ALLOW_LOCALHOST_CLIENTS": "false"
   },
 
+  // Serve only on li-agent.<subdomain>.workers.dev; no per-version preview hostnames.
+  "workers_dev": true,
+  "preview_urls": false,
+
   "observability": { "enabled": true },
   "dev": { "port": 8788 }
 }
