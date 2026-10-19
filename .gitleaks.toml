@@ -1,0 +1,7 @@
+# Secret scanning config for gitleaks (https://github.com/gitleaks/gitleaks).
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Placeholders and generated type files"
+paths = ['''worker/worker-configuration\.d\.ts''', '''worker/\.dev\.vars\.example''']

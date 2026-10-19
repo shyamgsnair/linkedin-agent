@@ -1,0 +1,7 @@
+# Local secret scanning before every commit.
+# Setup once: pip install pre-commit && pre-commit install   (or: brew install pre-commit)
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.24.2
+    hooks:
+      - id: gitleaks

@@ -1,0 +1,7 @@
+# Copy to .dev.vars for local development (it's gitignored). Never commit real values.
+LINKEDIN_CLIENT_ID=<from LinkedIn developer app, Auth tab>
+LINKEDIN_CLIENT_SECRET=<from LinkedIn developer app, Auth tab>
+# Generate with: openssl rand -hex 32
+COOKIE_ENCRYPTION_KEY=<random 64-char hex>
+# Leave blank on first run; the sign-in page will show your member ID to paste here.
+ALLOWED_MEMBER_ID=
