@@ -1,0 +1,14 @@
+{
+  "name": "shyamgsnair-plugins",
+  "description": "Shyam Nair's Claude plugins.",
+  "owner": {
+    "name": "Shyam Nair"
+  },
+  "plugins": [
+    {
+      "name": "linkedin-agent",
+      "source": "./",
+      "description": "Draft, publish and reshare LinkedIn posts in your own voice, with an explicit approval gate."
+    }
+  ]
+}

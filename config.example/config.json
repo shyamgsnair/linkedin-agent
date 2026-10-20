@@ -1,0 +1,6 @@
+{
+  "default_visibility": "CONNECTIONS",
+  "watchlist": [
+    { "name": "Full Name As Shown On LinkedIn", "profile_url": "https://www.linkedin.com/in/example/", "notes": "why you follow them" }
+  ]
+}

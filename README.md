@@ -12,7 +12,7 @@ It has two parts:
 | Part | What it is | Where |
 |---|---|---|
 | **Connector** | A remote MCP server on Cloudflare Workers (free plan). It signs you in with LinkedIn and exposes tools to post, reshare, delete and keep history. | [`worker/`](worker/) |
-| **Skill** | Instructions that tell Claude how to draft in your voice, when to ask, and when it may publish. | `skills/` *(coming next)* |
+| **Skill** | Instructions that tell Claude how to draft in your voice, when to ask, and when it may publish. | [`skills/linkedin-agent/`](skills/linkedin-agent/SKILL.md) |
 
 Everyone deploys **their own copy** of the connector with **their own LinkedIn app**. The server is locked to a single LinkedIn member ID and refuses everyone else.
 
@@ -95,6 +95,32 @@ npx wrangler deploy
 ### 5. Connect Claude
 
 In Claude, add a custom connector with the URL `https://li-agent.<your-workers-subdomain>.workers.dev/mcp`, then click **Connect** and sign in with LinkedIn.
+
+### 6. Install the skill
+
+**Claude Code:**
+
+```
+/plugin install linkedin-agent --marketplace shyamgsnair/linkedin-agent
+```
+
+**Claude app:** upload [`skills/linkedin-agent/SKILL.md`](skills/linkedin-agent/SKILL.md) as a skill in your Claude settings (or zip the `skills/linkedin-agent` folder).
+
+### 7. Set your voice and watchlist
+
+Copy [`config.example/`](config.example/) into a **private** repo and fill in `voice-guide.md` and `config.json`. Then ask Claude: *"Load my voice guide and watchlist into the LinkedIn connector"*, or use `/li voice edit` and `/li watch add`.
+
+For the daily reshare suggestion, connect **Gmail** in Claude, turn on the 🔔 bell (All posts) for each watched person on LinkedIn, and keep LinkedIn's email notifications on.
+
+## Using it
+
+| Say | Claude does |
+|---|---|
+| `/li draft <idea>` | Works the post up with you in your voice. Asks for the concrete detail if the idea is too abstract. |
+| `/li publish` | Shows the exact text and visibility, asks "Post this now?", publishes once on a clear yes. |
+| `/li suggest` | Reads LinkedIn notification emails, picks one post from people you watch, drafts commentary. Approve, edit, reject or skip. |
+| `/li watch add <name>` | Adds someone to the watchlist. |
+| `/li history` | Recent posts, reshares and decisions. |
 
 ## Development
 

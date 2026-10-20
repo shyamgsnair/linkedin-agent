@@ -1,0 +1,12 @@
+{
+  "name": "linkedin-agent",
+  "displayName": "LinkedIn Agent",
+  "version": "0.1.0",
+  "description": "Draft, publish and reshare LinkedIn posts in your own voice, with an explicit approval gate. Pairs with a self-hosted LinkedIn MCP connector on Cloudflare Workers.",
+  "author": { "name": "Shyam Nair", "url": "https://github.com/shyamgsnair" },
+  "homepage": "https://github.com/shyamgsnair/linkedin-agent",
+  "repository": "https://github.com/shyamgsnair/linkedin-agent",
+  "license": "MIT",
+  "keywords": ["linkedin", "social", "writing", "mcp"],
+  "skills": "./skills/"
+}
